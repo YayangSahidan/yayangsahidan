@@ -1,5 +1,5 @@
 body {
-    min-height: 3000px;
+  min-height: 3000px;
 }
 
 .jumbotron {
@@ -8,8 +8,22 @@ body {
 }
 
 #project {
-    background-color: rgb(191, 208, 236);
+  background-color: rgb(191, 208, 236);
 }
 section {
-    padding-top: 6rem;
+  padding-top: 6rem;
 }
+ /* Efek kursor berkedip */
+.typing-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1.2em;
+    background-color: black;
+    animation: blink 0.7s steps(1) infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  } 
