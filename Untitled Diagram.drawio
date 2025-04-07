@@ -29,7 +29,7 @@
           <mxGeometry y="50" width="180" height="290" as="geometry" />
         </mxCell>
         <mxCell id="ZNYywIUm3ItC9A_8JQBW-24" value="&lt;h3 style=&quot;text-align: start;&quot; class=&quot;&quot; data-end=&quot;708&quot; data-start=&quot;684&quot;&gt;&lt;strong data-end=&quot;708&quot; data-start=&quot;691&quot;&gt;Kategori_Buku&lt;/strong&gt;&lt;/h3&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="43" y="55" width="160" height="150" as="geometry">
+          <mxGeometry x="43" y="20" width="160" height="150" as="geometry">
             <mxRectangle x="43" y="55" width="160" height="70" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
