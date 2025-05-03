@@ -2,9 +2,42 @@ body {
   min-height: 3000px;
 }
 
+.navbar {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px); /* efek kaca buram */
+}
+
 .jumbotron {
   padding-top: 6rem;
-  background-color: rgb(191, 208, 236);
+  background: url("img/project/background.jpg") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  height: 100vh; /* Ubah sesuai kebutuhan */
+  color: white; /* Ubah jika perlu agar kontras */
+}
+
+.jumbotron::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(45, 74, 74, 0.4); /* Transparan gelap */
+  z-index: 1;
+}
+
+.jumbotron > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* about me */
+#about {
+  padding: 6rem 0;
+  background-color: rgb(249, 249, 248);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
 }
 
 #project {
@@ -13,17 +46,17 @@ body {
 section {
   padding-top: 6rem;
 }
- /* Efek kursor berkedip */
+/* Efek kursor berkedip */
 .typing-cursor {
-    display: inline-block;
-    width: 3px;
-    height: 1.2em;
-    background-color: black;
-    animation: blink 0.7s steps(1) infinite;
+  display: inline-block;
+  width: 3px;
+  height: 1.2em;
+  background-color: black;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
-  
-  @keyframes blink {
-    50% {
-      opacity: 0;
-    }
-  } 
+}
