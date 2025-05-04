@@ -1,5 +1,8 @@
+html,
 body {
-  min-height: 3000px;
+  min-height: 100;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
 }
 
 .navbar {
@@ -40,6 +43,7 @@ body {
   border-radius: 10px;
 }
 
+/* my project */
 #project {
   background-color: rgb(191, 208, 236);
 }
@@ -53,6 +57,58 @@ section {
   height: 1.2em;
   background-color: black;
   animation: blink 0.7s steps(1) infinite;
+}
+
+/* contact me */
+#contact {
+  padding: 6rem 0;
+  background-color: rgb(249, 249, 248);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+}
+
+/* button */
+
+.btn {
+  background-color: rgb(237, 14, 18);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 20px auto;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: rgb(108, 238, 168);
+  color: white;
+}
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(9, 10, 10, 0.5);
+}
+.btn:active {
+  background-color: rgb(23, 24, 25);
+  color: white;
+}
+
+/* footer */
+.footer {
+  background-color: rgb(103, 111, 119);
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+.footer p {
+  margin: 0;
+  color: white;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
 }
 
 @keyframes blink {
