@@ -4,51 +4,132 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
 }
-
-.navbar {
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px); /* efek kaca buram */
+/* tulisan Code hunter */
+.logo {
+  font-family: "Creepster", cursive;
+  font-size: 25px;
 }
 
+.logo .code {
+  color: rgb(50, 36, 22);
+  font-size: 35px;
+  font-family: "poppins", sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgb(255, 255, 255);
+  font-style: italic;
+}
+
+.logo .hunter {
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(18, 16, 16, 0.34);
+  animation: blink 1s infinite;
+  transition: color 1s ease;
+  cursor: pointer;
+}
+.logo .hunter::after {
+  content: "!";
+  color: red;
+  font-size: 1.2em;
+  animation: blink 0.1s infinite;
+}
+/* akhir code hunter */
+
+/* navbar */
+.navbar {
+  background-color: rgb(4, 2, 2);
+  backdrop-filter: blur(5px); /* efek kaca buram */
+}
+/* akhir navbar */
+
+/* jumbotron */
 .jumbotron {
   padding-top: 6rem;
   background: url("img/project/background.jpg") no-repeat center center;
-  background-size: cover;
   position: relative;
   height: 100vh; /* Ubah sesuai kebutuhan */
-  color: white; /* Ubah jika perlu agar kontras */
+  background-size: cover;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  display: absolute;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
 }
 
-.jumbotron::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(45, 74, 74, 0.4); /* Transparan gelap */
-  z-index: 1;
-}
-
-.jumbotron > * {
+.jumbotron-text {
+  background-color: rgba(6, 4, 4, 0.23); /* warna hitam transparan */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
   position: relative;
-  z-index: 2;
+  z-index: 1; /* Agar teks di atas background */
 }
+
+.name-title {
+  font-family: "poppins", sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  color: rgb(251, 251, 251);
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+.name-subtitle {
+  font-family: "poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgb(251, 251, 251);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-icon {
+  width: 32px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* icon media sosial */
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+/* akhir jumbotron */
 
 /* about me */
-#about {
-  padding: 6rem 0;
-  background-color: rgb(249, 249, 248);
-  backdrop-filter: blur(5px);
-  border-radius: 10px;
-}
 
 /* my project */
 #project {
-  background-color: rgb(191, 208, 236);
+  background-color: rgb(63, 75, 94);
 }
 section {
-  padding-top: 6rem;
+  padding-top: 2rem;
 }
 /* Efek kursor berkedip */
 .typing-cursor {
@@ -59,18 +140,73 @@ section {
   animation: blink 0.7s steps(1) infinite;
 }
 
-/* contact me */
-#contact {
-  padding: 6rem 0;
-  background-color: rgb(249, 249, 248);
-  backdrop-filter: blur(5px);
+.section-title {
+  font-size: 2.5remrem;
+  font-weight: 700;
+  color: rgb(233, 235, 236);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1.5px;
+  position: relative;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+}
+
+/* akhir myproject */
+
+/* skill */
+#skills .progress {
+  height: 20px;
   border-radius: 10px;
+  background-color: #e9ecef;
+}
+
+#skills h5 {
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+/* contact me */
+
+#contact {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  z-index: 0;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.6; /* Bisa kamu sesuaikan */
+}
+
+/* Supaya form kelihatan jelas di atas video */
+#contact .container {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(96, 180, 168, 0.19); /* transparan */
+  backdrop-filter: blur(10px); /* efek blur */
+  -webkit-backdrop-filter: blur(10px); /* support Safari */
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* biar ada depth */
 }
 
 /* button */
 
 .btn {
-  background-color: rgb(237, 14, 18);
+  background-color: rgb(3, 49, 52);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -88,12 +224,14 @@ section {
 }
 .btn:focus {
   outline: none;
-  box-shadow: 0 0 5px rgba(9, 10, 10, 0.5);
+  box-shadow: 0 0 5px rgba(0, 1, 1, 0.5);
 }
 .btn:active {
-  background-color: rgb(23, 24, 25);
+  background-color: rgb(2, 246, 209);
   color: white;
 }
+
+/* akhir contact me */
 
 /* footer */
 .footer {
@@ -115,4 +253,21 @@ section {
   50% {
     opacity: 0;
   }
+}
+
+/* animasi bar */
+.progress {
+  height: 25px;
+  margin-top: 10px;
+}
+.progress-bar {
+  width: 0%;
+  transition: width 1.5s ease-in-out;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bg-purple {
+  background-color: #6f42c1 !important;
 }
